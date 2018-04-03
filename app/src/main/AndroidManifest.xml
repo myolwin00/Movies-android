@@ -29,19 +29,6 @@
             android:authorities="io.github.emrys919.movies"
             android:exported="false" />
 
-        <!--
-        <service
-            android:name=".sync.MovieSyncService"
-            android:exported="false" />
-        <service
-            android:name=".sync.MovieJobService"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE" />
-            </intent-filter>
-        </service>
-        -->
-
         <activity
             android:name=".activities.MovieDetailActivity"
             android:label="@string/title_activity_detail"
@@ -55,7 +42,7 @@
             android:label="@string/title_activity_about" />
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="81d78a3f625a6b397da98339f1186ea86bb3d6d6" />
+            android:value="6fd5744392674d1f0c5b5fb5646a2d12cefcb964" />
     </application>
 
 </manifest>
