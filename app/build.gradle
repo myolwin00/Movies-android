@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        applicationId "io.github.emrys919.movies"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'MovieApiKey', MovieApiKey
+        buildConfigField 'String', 'YouTubeApiKey', YouTubeApiKey
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation rootProject.ext.lib.appcompat
+    implementation rootProject.ext.lib.support
+    implementation rootProject.ext.lib.constraint
+    implementation rootProject.ext.lib.design
+    implementation rootProject.ext.lib.cardview
+    implementation rootProject.ext.lib.palette
+    implementation rootProject.ext.lib.gson
+
+    implementation rootProject.ext.lib.retrofitConverterGson
+    implementation rootProject.ext.lib.retrofit
+
+    implementation rootProject.ext.lib.glide
+
+    implementation rootProject.ext.lib.butterknife
+    annotationProcessor rootProject.ext.annotationProcessor.butterknife
+
+    implementation rootProject.ext.lib.eventbus
+    implementation 'com.github.jrvansuita:MaterialAbout:+'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    testImplementation rootProject.ext.lib.junit
+}

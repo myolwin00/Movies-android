@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:behavior_overlapTop="64dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="io.github.emrys919.movies.activities.MovieDetailActivity"
+    tools:showIn="@layout/activity_detail"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/layout_movie_detail" />
+
+        <include
+            android:id="@+id/layout_movie_trailers"
+            layout="@layout/layout_movie_trailers" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

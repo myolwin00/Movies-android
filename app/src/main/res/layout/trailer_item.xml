@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/trailorView"
+    android:layout_width="225dp"
+    android:layout_height="150dp"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        tools:src="@drawable/spd_trailer_preview"
+        android:id="@+id/iv_trailer_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:background="@drawable/ic_play_circle_filled_white_48dp" />
+
+
+    <!--
+    <ImageView
+        android:foreground="@drawable/selector_action_bg"
+        android:alpha="0.8"
+        tools:src="@drawable/spd_trailer_preview"
+        android:id="@+id/iv_trailer_preview"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageView
+        android:id="@+id/play_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.8"
+        android:src="@drawable/ic_play_circle_filled_white_48dp" />
+        -->
+
+</FrameLayout>
